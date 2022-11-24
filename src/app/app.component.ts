@@ -15,7 +15,7 @@ constructor(private SafeService : SafeService){this.safe = new Safe();}
 
 onSubmit() {
  
-  this.SafeService.save(this.safe).subscribe((response) => {
+  this.SafeService.save(this.safe).subscribe((res) => {
     this.SafeService.GetSafes().subscribe(data => {
       this.safes = data;
     })
