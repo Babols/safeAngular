@@ -11,6 +11,7 @@ export class AppComponent  {
   title = 'Coffre-Fort';
 safes: Safe[] | undefined;
 safe: Safe;
+
 constructor(private SafeService : SafeService){this.safe = new Safe();}
 
 onSubmit() {
@@ -27,6 +28,10 @@ ngOnInit() {
     this.safes = data;
   })
 }
-
+onDelete(safeid:string){
+  this.SafeService.DeleteSafes(safeid).subscribe(data => {
+    this.onSubmit()
+    console.log("aaaaaaaaaa", data)
+})
 }
-
+}

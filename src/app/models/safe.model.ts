@@ -1,6 +1,6 @@
 
 export class Safe {
-    id: string | undefined;
+    id!: string;
     webSite: string | undefined;
     word: string | undefined;
     }
