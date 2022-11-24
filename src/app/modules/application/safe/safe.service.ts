@@ -7,6 +7,8 @@ import { Safe } from 'src/app/models/safe.model';
   providedIn: 'root',
 })
 export class SafeService {
+  safeUrl= 'http://localhost:8080/safes'
+  
   constructor(private http: HttpClient) {}
 
   public GetSafes(): Observable<Safe[]> {
@@ -31,4 +33,16 @@ export class SafeService {
       },
           });
   }
+
+  public DeleteSafes(safeid: String): Observable<number> {
+    let base64encodedData = Buffer.from('julien' + ':' + '123456').toString(
+      'base64'
+    );
+    return this.http.delete<number>(this.safeUrl+"/"+safeid, {
+      headers: {
+        Authorization: 'Basic ' + base64encodedData,
+      },
+    });
+  }
+
 }
