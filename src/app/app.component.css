@@ -1,3 +1,4 @@
+*{margin: 0;}
 .container{
     display: flex;
     flex-direction: row;
@@ -6,6 +7,7 @@
 align-items: center;
 margin-top: 5px;
 border-radius: 10%;
+margin-bottom: 10px;
 }
 
 
@@ -26,3 +28,21 @@ height: 10%;
 border-radius: 10px;
 transition-duration: 1s;
 }
+.tout{width: 100%;}
+.safe-block{ 
+    border-radius: 5px;
+}
+input{border-radius: 5px;}
+ul{list-style: none;
+height: 300px;
+overflow-y: auto;
+text-align: center;}
+li{margin-top: 25px;
+    margin-right: 25px;
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+li:hover{background-color: orange;
+    transition-duration: 0.2s;
+color: white;}
