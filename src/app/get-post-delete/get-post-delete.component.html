@@ -1,0 +1,36 @@
+
+<div class="container">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+        <label for="newWebSite">New WebSite : </label>
+        <input
+        type="text"
+        name="webSite"
+        id="newWebSite"
+        [(ngModel)]=safe.webSite
+        #webSite="ngModel"
+      />
+      <label for="newWord">New Password : </label>
+      <input
+      type="text"
+      name="word"
+      id="newWord"
+      [(ngModel)]=safe.word
+      #word="ngModel"
+    />
+    <button type="submit"> Create </button>
+      </form>
+    </div> 
+<div class="safe-block">
+    <div class="safe-body">
+        <ul>
+            <li *ngFor="let safe of safes">
+               Website : {{ safe.webSite }}
+               Password : {{ safe.word }}
+               <button class="delete" type="button" (click)="onDelete(safe.id)" > ❌ </button>
+            </li>
+        </ul>
+    </div>
+    <div class="cont-logout">
+    <button type="button" routerLink="/logout" class="btn-logout"> Logout </button>
+</div>
+</div>
