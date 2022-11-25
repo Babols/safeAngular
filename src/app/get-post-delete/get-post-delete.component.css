@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -6,6 +9,7 @@
   align-items: center;
   margin-top: 5px;
   border-radius: 10%;
+  margin-bottom: 10px;
 }
 
 form {
@@ -27,10 +31,42 @@ button {
   border-radius: 10px;
   transition-duration: 1s;
 }
+.tout {
+  width: 100%;
+}
+.safe-block {
+  border-radius: 5px;
+}
+input {
+  border-radius: 5px;
+  height: 25px;
+}
+ul {
+  list-style: none;
+  width: 60vw;
+  height: 300px;
+  overflow-y: auto;
+}
+li {
+  margin-top: 25px;
+  margin-right: 25px;
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+li:hover {
+  background-color: orange;
+  transition-duration: 0.2s;
+  color: white;
+}
+
 .delete {
   width: 0px;
   background-color: transparent;
-  border: 1px solid #3498db;
+  border: 0px solid #3498db;
+  margin-right: 15px;
 }
 
 .cont-logout {
