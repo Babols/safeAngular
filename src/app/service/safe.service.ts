@@ -12,7 +12,7 @@ export class SafeService {
   constructor(private http: HttpClient) {}
 
   public GetSafes(): Observable<Safe[]> {
-    let base64encodedData = Buffer.from('julien' + ':' + '123456').toString(
+    let base64encodedData = Buffer.from('antoine' + ':' + '123456').toString(
       'base64'
     );
     return this.http.get<Safe[]>('http://localhost:8080/safes', {
@@ -23,7 +23,7 @@ export class SafeService {
   }
 
   public save(safe: Safe) {
-    let base64encodedData = Buffer.from('julien' + ':' + '123456').toString(
+    let base64encodedData = Buffer.from('antoine' + ':' + '123456').toString(
       'base64'
     );
     console.log('aaaaaa', safe);
